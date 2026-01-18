@@ -1,0 +1,9 @@
+Package: voxl-mapper
+Version: 0.2.2
+Section: base
+Priority: optional
+Architecture: arm64
+Depends: libmodal-json, libvoxl-cutils, voxl-ceres-solver(>=1.14.0-8), voxl-nlopt, voxl-mpa-tools, libmodal-pipe(>=2.10.0), voxl-voxblox(>=1.0.5), voxl-portal(>=0.2.8)
+Conflicts:
+Maintainer: ModalAI
+Description: voxl-mapper

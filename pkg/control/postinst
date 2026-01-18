@@ -1,0 +1,25 @@
+#!/bin/sh
+################################################################################
+# Copyright (c) 2020 ModalAI, Inc. All rights reserved.
+#
+# author: james@modalai.com
+################################################################################
+
+set -e
+
+
+# rescan /usr/lib for new libraries this package may provide
+if [ -f "/sbin/ldconfig" ]; then
+	ldconfig
+fi
+
+# try to reload services, but don't fail if it can't
+set +e
+if [ -f /bin/systemctl ]; then
+	systemctl daemon-reload
+fi
+
+# exit 0 even if systemctl failed
+exit 0
+
+# make sure there is a newline at the end here or opkg will whine

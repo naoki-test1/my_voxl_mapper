@@ -1,0 +1,19 @@
+#
+# Copyright (c) 2022 ModalAI, Inc.
+#
+
+[Unit]
+Description=voxl-mapper
+SourcePath=/usr/bin/voxl-mapper
+After=voxl-wait-for-fs.service
+Requires=voxl-wait-for-fs.service
+
+[Service]
+User=root
+Type=simple
+PIDFile=/run/voxl-mapper.pid
+ExecStart=/bin/bash -c "/usr/bin/voxl-mapper"
+
+[Install]
+WantedBy=multi-user.target
+

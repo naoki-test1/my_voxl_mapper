@@ -1,0 +1,58 @@
+0.2.2
+    * fix apq8096 build
+0.2.1
+    * update to use new tof2_data_t type
+    * reduce voxel size again to 0.15
+    * improve warnings when VIO comes and goes
+0.2.0
+    * update defaults for robot radius, voxel size
+    * allow flying into unknown areas by default
+0.1.9
+    * remove voxl-vision-px4 dependency
+    * pose pipe rename
+0.1.7
+    * voxl-vision-px4 to voxl-vision-hub transition
+0.1.6
+    * added esdf to mesh_api, serves it up in a human readable format
+    * added more esdf pub options
+0.1.5
+    * multi tof support
+    * bug fix for multi pointcloud input rates
+    * now sending aligned pointclouds with proper timestamps, using new id field in ptcloud meta
+    * added service file
+0.1.4
+    * added some better handling for failed mesh creation/writes
+0.1.3
+    * changed default mesh path to no longer include an extension
+    * added support for mesh forwarding (from buffer) and mesh saving to disk
+    * formats for above are: .ply, .obj, .gltf
+    * fixed cmake warnings
+0.1.2
+    * added mesh_endpoint for portal, basic api to receive mesh in ply format
+0.1.1
+    * Swapped to use voxl-eigen3
+0.1.0
+    * Major changes to mapping
+    * Major changes to planning architecture
+0.0.7
+    * update to match latest voxl-voxblox
+0.0.6
+    * New CI Stuff
+0.0.6
+    * costmap slider level control cmds added, calculating relative height based on map bounds
+    * costmap sending voxel_size in z coords
+    * costmap doubles->floats
+    * updated depth_pipe cb flow
+    * NEEDS voxl-portal >= v0.2.4 for these features
+0.0.5
+    * patch for vvpx4 trajectory_interface updates
+0.0.4
+    * support up to 5 depth inputs, 4 of which are generic pointcloud topics
+    * individual data rates per pipe
+    * mesh/visual generation + esdf updates in own thread
+0.0.3
+    * stereo / tof option, new template
+0.0.2
+    * loco tuning, skeleton removal, rrt* improvements, pointcloud downsampling algo added
+0.0.1
+    * initial release, mapping and path planning
